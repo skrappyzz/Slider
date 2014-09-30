@@ -1,0 +1,105 @@
+* {
+  height: 100%;
+}
+body {
+  background: #061d37;
+  font-size: 13px;
+  margin: 0;
+}
+.blue {
+  background: #5b83ad;
+}
+.white {
+  background: #ededed;
+}
+.red {
+  background: #ea3f37;
+}
+#slider ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+}
+#slider ul li {
+  display: table-cell;
+  width: 33.3%;
+}
+#slider a {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #slider,
+  #slider li {
+    position: relative;
+    width: 100%;
+  }
+  #slider {
+    margin: auto;
+    overflow: hidden;
+  }
+  #slider ul {
+    list-style-type: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 300%;
+    -webkit-transition: left .3s linear;
+    transition: left .3s linear;
+  }
+  #slider a {
+    background: url("/images/arrow-slider.png") no-repeat 0 0;
+    cursor: pointer;
+    height: 100px;
+    width: 28px;
+    outline-width: 0px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    text-indent: -9999px;
+    z-index: 2;
+  }
+  #a1:target ul {
+    left: 0px;
+  }
+  #a2:target ul {
+    left: -100%;
+  }
+  #a3:target ul {
+    left: -200%;
+  }
+  #slider li {
+    float: left;
+  }
+  #slider a[class^="down"] {
+    left: 10px;
+  }
+  #slider a[class^="up"] {
+    right: 10px;
+  }
+  #slider a[class^="down"]:hover {
+    opacity: 0.6;
+  }
+  #slider a[class^="down"],
+  #slider a[class^="down"]:active {
+    background-position: left bottom;
+  }
+  #slider a[class^="up"]:hover {
+    opacity: 0.6;
+  }
+  #slider a[class^="up"],
+  #slider a[class^="up"]:active {
+    background-position: right bottom;
+  }
+  :target .up2.default {
+    display: none !important;
+  }
+  .up2.default,
+  #a1:target .up2,
+  #a2:target .down1,
+  #a2:target .up3,
+  #a3:target .down2 {
+    display: block !important;
+  }
+}

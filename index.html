@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Slider</title>
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/mystyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="slider">
+
+        <!-- :target hooks -->
+        <div id="a1">
+            <div id="a2">
+                <div id="a3">
+
+                    <!-- 1 -->
+                    <a href="#a2" class="up2 default">2</a>
+                    <a href="#a2" class="up2">2</a>
+
+                    <!-- 2 -->
+                    <a href="#a1" class="down1">1</a>
+                    <a href="#a3" class="up3">3</a>
+
+                    <!-- 3 -->
+                    <a href="#a2" class="down2">2</a>
+
+                    <ul class="color_blocks">
+                        <script id="template" type="text/x-handlebars-template">
+                        {{#each colors}} <li class="{{this}}"></li>
+                        {{/each}}
+                        </script>
+                    </ul>
+                </div>
+                <!-- End #a3 -->
+            </div>
+            <!-- End #a2 -->
+        </div>
+        <!-- End #a1 -->
+    </div>
+    <!-- End #slider -->
+
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/handlebars-v2.0.0.js"></script>
+    <script src="/js/mycoff.js"></script>
+</body>
+
+</html>
