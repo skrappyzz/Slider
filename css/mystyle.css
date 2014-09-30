@@ -40,6 +40,7 @@ body {
     overflow: hidden;
   }
   #slider ul {
+    display: block;
     list-style-type: none;
     position: absolute;
     left: 0px;
@@ -60,6 +61,10 @@ body {
     text-indent: -9999px;
     z-index: 2;
   }
+  #slider li {
+    float: left;
+    display: block;
+  }
   #a1:target ul {
     left: 0px;
   }
@@ -68,9 +73,6 @@ body {
   }
   #a3:target ul {
     left: -200%;
-  }
-  #slider li {
-    float: left;
   }
   #slider a[class^="down"] {
     left: 10px;

@@ -55,6 +55,7 @@ body
 		overflow: hidden;
 		ul
 		{
+			display: block;
 			list-style-type: none;
 			position: absolute;
 			left: 0px;
@@ -75,6 +76,11 @@ body
 			text-indent: -9999px;
 			z-index: 2;
 		}
+		li
+		{
+			float: left;
+			display: block;
+		}
 	}
 	#a1:target ul 
 	{
@@ -87,10 +93,6 @@ body
 	#a3:target ul
 	{
 		left: -200%;
-	}
-	#slider li 
-	{
-		float: left;
 	}
 	#slider a[class^="down"]
 	{ 	
